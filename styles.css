@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'PixelFont';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+body {
+    font-family: 'PixelFont', 'Press Start 2P', monospace;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    border: 4px solid #fff;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c94fc;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.pixel-text {
+    font-family: 'PixelFont', 'Press Start 2P', monospace;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pixel-button {
+    font-family: 'PixelFont', 'Press Start 2P', monospace;
+    background-color: #fc5c5c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 4px solid #fff;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.1s;
+}
+
+.pixel-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Pelinäkymän elementit */
+#sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #5c94fc;
+}
+
+#sun {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 80px;
+    height: 80px;
+    background-color: #fcfc5c;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fcfc5c;
+}
+
+#tree {
+    position: absolute;
+    bottom: 150px;
+    left: 150px;
+    width: 40px;
+    height: 120px;
+    background-color: #94582c;
+}
+
+#tree:before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: #2c942c;
+    border-radius: 50%;
+}
+
+#grass-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #2c942c;
+    cursor: pointer;
+}
+
+#timer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+#player {
+    position: absolute;
+    bottom: 150px;
+    right: 150px;
+    width: 40px;
+    height: 80px;
+    background-color: #fc5c5c;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#badge {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #fff;
+}
+
+#badge:before {
+    content: '🌿';
+    font-size: 50px;
+}
+
+#achievement {
+    margin: 20px 0;
+}
